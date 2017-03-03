@@ -1,0 +1,107 @@
+<div class="shop">
+	<div class="row" style="margin-bottom: 0;">
+		<div class="col m8 l8">
+			<div class="row" style="margin-bottom: 0;">
+				<div class="shop-info col m12 l12">
+					<p class="title">店铺基本信息</p>
+					<div class="row" style="margin-bottom: 0;">
+						<form class="col m12 l12">
+							<div class="input-field col s6 m6">
+								<i class="material-icons prefix">business</i>
+								<input type="text" class="validate" placeholder="这里是你的店铺名" ng-model="store.name">
+							</div>
+							<div class="input-field col s6 m6">
+								<i class="material-icons prefix">settings_phone</i>
+								<input type="tel" class="validate" placeholder="这里是店铺的电话" ng-model="store.phone">
+							</div>
+							<div class="input-field col s6 m6">
+								<i class="material-icons prefix">home</i>
+								<input type="text" class="validate" placeholder="这里是店铺的地址" ng-model="store.address">
+							</div>
+						</form>
+					</div>
+					<div class="submit">
+						<a class="btn" ng-click="modifyStore()">保存</a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="owner-info col m12 12">
+					<p class="title">店主信息</p>
+					<div class="row" style="margin-bottom: 0;">
+						<form class="col m12 l12">
+							<div class="input-field col s6 m6">
+								<i class="material-icons prefix">person_pin</i>
+								<input type="text" class="validate" disabled ng-model="store.owner_name" style="font-weight: 700;color: #012;">
+							</div>
+							<div class="input-field row col s6 m6">
+								<i class="material-icons prefix">smartphone</i>
+								<input type="text" class="validate" placeholder="这里是店主的联系电话" ng-model="store.owner_telephone">
+							</div>
+							<div class="input-field col s12 m12">
+								<i class="material-icons prefix">mode_edit</i>
+								<textarea id="_business-des" class="materialize-textarea" length="120" ng-model="store.description"></textarea>
+								<label for="_business-des" class="active">这里是您对自家小店的描述：</label>
+							</div>
+						</form>
+					</div>
+					<div class="submit">
+						<a class="btn" ng-click="modifyStore()">保存</a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="cheapInfo col m12 l12">
+					<p class="title">优惠信息</p>
+					<div class="row" style="margin-bottom: 0;">
+						<form class="col m12 l12">
+							<div class="input-field col s6 m6">
+								<i class="material-icons prefix">trending_down</i>
+								<input type="text" class="validate" placeholder="这里是折扣信息" ng-model="preInfo.discountString">
+							</div>
+							<div class="input-field row col s6 m6">
+								<i class="material-icons prefix">arrow_downward</i>
+								<input type="text" class="validate" placeholder="这里是满减信息" ng-model="preInfo.minusString">
+							</div>
+							<div class="input-field row col s6 m6">
+								<i class="material-icons prefix">card_giftcard</i>
+								<input type="text" class="validate" placeholder="这里是满送信息" ng-model="preInfo.giftString">
+							</div>
+						</form>
+					</div>
+					<div class="submit">
+						<a class="btn" ng-click="modifyPre()">保存</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col m4 l4">
+			<div class="row" style="margin-bottom: 0;">
+				<div class="confirm col s12 m12">
+					<p class="title">申请会员的用户</p>
+					<table>
+						<thead>
+							<tr>
+								<td>用户</td>
+								<td>操作</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="member in members">
+								<td ng-bind="member.username"></td>
+								<td><a href="javascript:;" ng-click="addMember($index)">同意</a></td>
+								<td><a href="javascript:;" ng-click="deleteMember($index)">忽略</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="fixed-action-btn">
+						<a href="javascript:;" class="btn-floating btn-large red" ng-click="getMembers()">
+							<i class="material-icons">autorenew</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

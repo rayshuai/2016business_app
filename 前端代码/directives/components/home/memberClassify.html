@@ -1,0 +1,55 @@
+<div class="classify">
+	<ul class="collapsible popout" data-collapsible="accordion">
+		<li>
+			<div class="collapsible-header active" style="font-weight: 700;">会员等级分类</div>
+		</li>
+		<li>
+			<div class="collapsible-header"><i class="material-icons">looks_one</i>银卡会员</div>
+			<div class="collapsible-body">
+				<div class="row">
+					<div class="input-field col s12 m12">
+						<input id="_y-point" type="text" ng-model="memberLevel[0].point">
+						<label for="_y-point" class="active">所需的积分额度</label>
+					</div>
+					<div class="input-field col s12 m12">
+						<input id="_y-dis" type="text" ng-model="memberLevel[0].discount">
+						<label for="_y-dis" class="active">享有的折扣</label>
+					</div>
+					<a href="javascript:;" class="btn col s6 m6 offset-s3 offset-m3" ng-click="modifyLevel(0)">确认修改</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header"><i class="material-icons">looks_two</i>金卡会员</div>
+			<div class="collapsible-body">
+				<div class="row">
+					<div class="input-field col s12 m12">
+						<input id="_j-point" type="text" ng-model="memberLevel[1].point">
+						<label for="_j-point" class="active">所需的积分额度</label>
+					</div>
+					<div class="input-field col s12 m12">
+						<input id="_j-dis" type="text" ng-model="memberLevel[1].discount">
+						<label for="_j-dis" class="active">享有的折扣</label>
+					</div>
+					<a href="javascript:;" class="btn col s6 m6 offset-s3 offset-m3" ng-click="modifyLevel(1)">确认修改</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="collapsible-header"><i class="material-icons">looks_3</i>钻石卡会员</div>
+			<div class="collapsible-body">
+				<div class="row">
+					<div class="input-field col s12 m12">
+						<input id="_z-point" type="text" ng-model="memberLevel[2].point">
+						<label for="_z-point" class="active">所需的积分额度</label>
+					</div>
+					<div class="input-field col s12 m12">
+						<input id="_z-dis" type="text" ng-model="memberLevel[2].discount">
+						<label for="_z-dis" class="active">享有的折扣</label>
+					</div>
+					<a href="javascript:;" class="btn col s6 m6 offset-s3 offset-m3" ng-click="modifyLevel(2)">确认修改</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,370 @@
+.admin-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #23beb1;
+  width: 100%;
+  height: 67px;
+  min-width: 900px;
+  border-bottom: 3px solid #1db2a6;
+}
+.admin-head .title h1 {
+  display: inline-block;
+  font-size: 36px;
+  color: #fff;
+  margin: 0;
+  line-height: 66px;
+  font-weight: 600;
+}
+.admin-head p.user {
+  position: absolute;
+  right: 66px;
+  display: inline-block;
+  width: 128px;
+  height: 66px;
+  line-height: 66px;
+  font-size: 22px;
+  color: #fff;
+}
+.admin-head p.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.admin-head i.quit {
+  position: absolute;
+  right: 0;
+  width: 66px;
+  height: 66px;
+  font-size: 36px;
+  cursor: pointer;
+  color: #fff;
+  float: right;
+  text-align: center;
+  line-height: 66px;
+}
+.admin-head i.quit:hover {
+  color: #7D7D7D;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 900px;
+  margin-top: 67px;
+}
+#container #sidebar {
+  float: left;
+  width: 280px;
+  height: 100%;
+  background-color: #fff;
+}
+#container #sidebar .side-nav {
+  margin-top: 67px;
+  width: 280px;
+}
+#container #content {
+  margin-left: 280px;
+  height: 100%;
+  padding: 10px 10px 10px 20px;
+  background-color: #fff;
+}
+#container #content .shop p.title {
+  margin: 2px 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .shop .shop-info {
+  border: 1px solid #abcde6;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+  border-bottom: none;
+}
+#container #content .shop .shop-info input {
+  height: 2rem;
+}
+#container #content .shop .shop-info .submit {
+  position: relative;
+  height: 45px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #abcde6;
+}
+#container #content .shop .shop-info .submit a.btn {
+  position: absolute;
+  left: 50%;
+  margin-left: -44px;
+  width: 100px;
+}
+#container #content .shop .owner-info {
+  border-left: 1px solid #abcde6;
+  border-right: 1px solid #abcde6;
+}
+#container #content .shop .owner-info .submit {
+  position: relative;
+  height: 45px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #abcde6;
+}
+#container #content .shop .owner-info .submit a.btn {
+  position: absolute;
+  left: 50%;
+  margin-left: -44px;
+  width: 100px;
+}
+#container #content .shop .cheapInfo {
+  border: 1px solid #abcde6;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
+}
+#container #content .shop .cheapInfo .submit {
+  position: relative;
+  height: 45px;
+  padding-bottom: 10px;
+}
+#container #content .shop .cheapInfo .submit a.btn {
+  position: absolute;
+  left: 50%;
+  margin-left: -44px;
+  width: 100px;
+}
+#container #content .shop .confirm {
+  border: 1px solid #abcde6;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 10px;
+}
+#container #content .member p.title {
+  margin: 2px 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .member .member-search {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+}
+#container #content .member .member-search input {
+  height: 2rem;
+}
+#container #content .member .member-list {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+}
+#container #content .member .member-list .member-table {
+  margin: 0 15px;
+}
+#container #content .member .member-list .member-table table tr {
+  cursor: pointer;
+}
+#container #content .member .member-list .member-table table tr:hover {
+  background-color: #d8f5ed;
+}
+#container #content .member .member-list .member-table table tr td {
+  padding: 5px;
+}
+#container #content .member .member-list .member-pagination {
+  margin: 2px 15px 5px;
+  border-top: 1px dashed #e6e1e1;
+}
+#container #content .member .member-list .member-pagination .pagination {
+  padding-top: 5px;
+}
+#container #content .cashier-desk p.title {
+  margin: 2px 15px;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .cashier-desk .customer {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#container #content .cashier-desk .customer input {
+  height: 2rem;
+  margin-bottom: 5px;
+}
+#container #content .cashier-desk .customer .member-info p.cut-line {
+  margin: 0 15px 5px 15px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .cashier-desk .customer .member-info p.no-member {
+  margin: 5px 15px 0;
+  color: #ff0000;
+}
+#container #content .cashier-desk .customer .member-info .info {
+  margin: 5px 15px 0;
+}
+#container #content .cashier-desk .customer .member-info .info span.m {
+  color: #ff0000;
+  font-weight: 700;
+  margin-right: 15px;
+}
+#container #content .cashier-desk #money-chart {
+  height: 300px;
+  margin-bottom: 20px;
+}
+#container #content .cashier-desk #money-origin-chart {
+  height: 300px;
+}
+#container #content .cashier-desk .money {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#container #content .cashier-desk .money label {
+  position: relative;
+  top: 0;
+  width: 80px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #403f3f;
+}
+#container #content .cashier-desk .money input {
+  width: 300px;
+  height: 2rem;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+#container #content .cashier-desk .money textarea {
+  width: 300px;
+  height: 2rem;
+  min-height: 2rem;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+#container #content .gift-manage p.title {
+  margin: 2px 0;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .gift-manage .exchange {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+}
+#container #content .gift-manage .exchange input {
+  height: 2rem;
+  margin-bottom: 5px;
+}
+#container #content .gift-manage .exchange .exchange-info p.cut-line {
+  margin: 0 15px 5px 15px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .gift-manage .exchange .exchange-info p.no-member {
+  margin: 5px 15px 0;
+  color: #ff0000;
+}
+#container #content .gift-manage .exchange .exchange-info .info {
+  margin: 5px 15px 0;
+}
+#container #content .gift-manage .exchange .exchange-info .info span.m {
+  color: #ff0000;
+  font-weight: 700;
+  margin-right: 15px;
+}
+#container #content .gift-manage .gift-list {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+}
+#container #content .gift-manage .gift-list table tr:hover {
+  background-color: #d8f5ed;
+}
+#container #content .gift-manage .gift-list table tr td {
+  padding: 5px;
+}
+#container #content .gift-manage .gift-list .gift-pagination {
+  margin: 2px 0px 5px;
+  border-top: 1px dashed #e6e1e1;
+}
+#container #content .gift-manage .gift-list .gift-pagination .pagination {
+  padding-top: 5px;
+}
+#container #content .gift-manage .gift-list .gift-pagination .pagination li a {
+  font-size: 1rem;
+}
+#container #content .gift-manage .gift-add {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+}
+#container #content .gift-manage .gift-add input {
+  height: 2rem;
+  margin-bottom: 0;
+}
+#container #content .gift-manage .gift-add .file-field .btn {
+  position: relative;
+  left: 45px;
+  height: 36px;
+  line-height: 36px;
+}
+#container #content .gift-manage .gift-add .add-btn {
+  postion: relative;
+  top: -56px;
+  left: 160px;
+}
+#container #content .join-member p.title {
+  margin: 2px 0;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px dashed #e6e1e1;
+}
+#container #content .join-member .logo-upload {
+  border: 1px solid #abcde6;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+#container #content .join-member .logo-upload #clip-box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area {
+  position: absolute;
+  border: 1px solid #fff;
+  cursor: move;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area .point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area .left-top {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area .right-top {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area .right-bottom {
+  right: -5px;
+  bottom: -5px;
+  cursor: se-resize;
+}
+#container #content .join-member .logo-upload #clip-box .clip-area .left-bottom {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+#container #content .join-member .logo-upload #clip-box .btn-area {
+  position: absolute;
+  right: -200px;
+  bottom: 0;
+}
+#container #content .join-member .logo-upload #clip-box #preview {
+  position: absolute;
+  right: -240px;
+  top: 0;
+}
+
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,139 @@
+<div class="gift-manage">
+	<div class="row" style="margin-bottom: 0;">
+		<div class="col m8 l8">
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="exchange col s12 m12">
+					<p class="title">礼品兑换券</p>
+					<div class="row" style="margin-bottom: 10px;">
+						<div class="input-field col m6 l6">
+						<i class="material-icons prefix">credit_card</i>
+						<input type="text" placeholder="请输入用户兑换券号" ng-model="card">
+						</div>
+						<div class="input-field col" style="width: 130px;">
+							<a class="waves-effect waves-light btn" ng-click="getCardInfo()">查找</a>
+						</div>
+					</div>
+					<div class="exchange-info row" ng-show="clickCard">
+						<p class="cut-line"></p>
+						<p class="no-member" ng-hide="isInfo">没有找到相关兑换券信息</p>
+						<div class="info col m12 l12" ng-show="isInfo">
+							<span>兑换礼品 : </span>
+							<span class="m" ng-bind="cardInfo.giftName"></span>
+							<span>兑换金额 : </span>
+							<span class="m" ng-bind="cardInfo.giftMoney"></span>
+							<span style="margin-left: 100px;"><a href="javascript:void(0)" class="btn" style="background-color: #ee6e73;" ng-click="exchangeCard()">确认兑换</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="gift-list col m12 l12">
+					<p class="title">礼品列表</p>
+					<table class="striped">
+						<thead>
+							<tr>
+								<td>名称</td>
+								<td>兑换积分</td>
+								<td>换购金额</td>
+								<td>库存量</td>
+								<td>操作</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="gift in giftList" ng-click="showGift($index)">
+								<td ng-bind="gift.name"></td>
+								<td ng-bind="gift.point" style="padding-left: 20px;"></td>
+								<td ng-bind="gift.money" style="padding-left: 20px;"></td>
+								<td ng-bind="gift.stock" style="padding-left: 20px;"></td>
+								<td><a href="javascript:;" ng-click="deleteGift($index, $event)">下架</a></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="gift-pagination">
+						<ul class="pagination">
+						    <li class="disabled"><a href="javascript:;"><i class="material-icons">chevron_left</i></a></li>
+						    <li class="active"><a href="javascript:;">1</a></li>
+						    <li class="waves-effect"><a href="javascript:;">2</a></li>
+						    <li class="waves-effect"><a href="javascript:;">3</a></li>
+						    <li class="waves-effect"><a href="javascript:;">4</a></li>
+						    <li class="waves-effect"><a href="javascript:;">5</a></li>
+						    <li class="waves-effect"><a href="javascript:;"><i class="material-icons">chevron_right</i></a></li>
+						</ul>		
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col m4 l4">
+			<div class="row" style="margin-bottom: 0;">
+				<div class="gift-modify col s12 m12" ng-show="isShowGift">
+					<div class="card sticky-action">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" ng-src="{{chosenGift.picture}}" alt="礼品图像">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">{{ chosenGift.name }}<i class="material-icons right">more_vert</i></span>
+						</div>
+						<div class="card-action">
+							<a href="javascript:;" ng-click="modifyGift()">确认修改</a>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4" style="margin-bottom: 20px;">{{ chosenGift.name }}<i class="material-icons right">close</i></span>
+							<div class="input-field col s12">
+								<input placeholder="兑换积分" id="_point" type="text" class="validate" ng-model="chosenGift.point">
+          						<label for="_point" class="active">兑换积分</label>
+							</div>
+							<div class="input-field col s12">
+								<input placeholder="换购金额" id="_money" type="text" class="validate" ng-model="chosenGift.money">
+          						<label for="_money" class="active">换购金额</label>
+							</div>
+							<div class="input-field col s12">
+								<input placeholder="库存量" id="_stock" type="number" class="validate" ng-model="chosenGift.stock">
+          						<label for="_stock" class="active">库存量</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 10px;">
+				<div class="gift-add col s12 m12">
+					<p class="title">添加新礼品</p>
+					<form class="col s12 m12" style="margin-bottom: -30px;">
+						<div class="row">
+							<div class="input-field col s12 m12">
+								<i class="material-icons prefix">border_color</i>
+								<input id="_add-name" type="text" placeholder="礼品名称" ng-model="gift.name">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m12">
+								<i class="material-icons prefix">control_point_duplicate</i>
+								<input type="text" placeholder="兑换积分" ng-model="gift.point">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m12">
+								<i class="material-icons prefix">attach_money</i>
+								<input id="_add-money" type="text" placeholder="换购金额" ng-model="gift.money">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m12">
+								<i class="material-icons prefix">store</i>
+								<input id="_add-stock" type="number" placeholder="库存量" ng-model="gift.stock">
+							</div>
+						</div>
+						<div class="row">
+							<div class="file-field input-field">
+						    	<div class="btn">
+							        <span>图片</span>
+							        <input type="file" form-upload="">
+						      	</div>				      	
+						    </div>
+						</div>
+						<a href="javascript:;" class="add-btn waves-effect waves-light btn" ng-click="addGift()">添加</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

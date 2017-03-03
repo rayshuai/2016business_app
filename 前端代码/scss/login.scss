@@ -1,0 +1,301 @@
+$theme-color: #23beb1;
+$min-width: 900px;
+
+.login-head {
+	width: 100%;
+	height: 67px;
+	border: 3px solid #1db2a6;
+	background-color: $theme-color;
+
+	.login-con {
+		min-width: $min-width;
+		// margin: 0 auto;
+
+		h1 {
+			display: inline-block;
+			font-size: 36px;
+			color: #fff;
+			margin: 0;
+			line-height: 66px;
+
+			&.login-app {
+				font-weight: 600;
+			}
+
+			&.login-business {
+				font-weight: 300;
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+.login-body {
+	min-width: $min-width;
+	margin: 20px auto;
+	border: 1px solid #d4d4d4;
+	border-radius: 4px;
+
+	 .head {
+		position: relative;
+		margin-top: 15px;
+		padding: 10px 0;
+		border-bottom: 1px solid #e2e2e2;
+
+		h2 {
+			display: inline;
+			font-size: 24px;
+			color: #333;
+			font-family: "宋体";
+		}
+
+	 }
+
+	 .logo-area {
+	 	border-left: 1px dashed #e5e5e5;
+
+	 	h5 {
+	 		text-align: center;
+	 	}
+
+	 	.d-bar {
+	 		width: 200px;
+	 		height: 200px;
+	 		margin: 15px auto;
+
+	 		img {
+	 			width: 100%;
+	 			height: 100%;
+	 		}
+	 	}
+	 }
+}
+
+.service-body {
+	min-width: $min-width;
+	margin: 20px auto;
+
+	.head {
+		height: 42px;
+
+		p {
+			text-align: center;
+			font-size: 2em;
+			font-weight: 400;
+			color: #22b8aa;
+		}
+	}
+
+	.content {
+		margin-top: 20px;
+
+		.card-area {
+			height: 200px;
+			border: 4px solid $theme-color;
+			border-radius: 8px;
+			cursor: pointer;
+			color: $theme-color;
+			background-color: #fff;
+			transition: background-color 0.5s, color 0.5s;
+
+			&:hover {
+				background-color: $theme-color;
+				color: #fff;
+			}
+
+			.icon-area {
+				margin-top: 30px;
+				height: 100px;
+				text-align: center;
+
+				i {
+					font-size: 70px;
+				}
+			}
+		}
+
+		.card-area.chosen {
+			background-color: $theme-color;
+			color: #fff;
+		}
+
+		.text-area {
+			margin-top: 25px;
+			color: #333;
+			font-family: "宋体";
+		}
+
+		.btn-area {
+			margin-top: 30px;
+			display: none;
+
+			&.show {
+				display: block;
+			}
+		}
+	}
+}
+
+.register-body {
+	min-width: $min-width;
+
+	.register-con {
+		border: 1px solid #d4d4d4;
+		min-height: 500px;
+
+		.register-info {
+			.info-title {
+				height: 50px;
+				padding: 15px;
+				border-bottom: 1px dashed #e5e5e5;
+
+				p {
+					font-size: 20px;
+				}
+			}
+
+			.info-con {
+				padding: 15px;
+
+				.remark-business-btn {
+					margin-top: 10px;
+					margin-left: 20px;
+				}
+
+				i.error {
+					margin-top: 10px;
+					color: #F44336;
+				}
+				
+				select.category {
+					width: 80%;
+					position: relative;
+					cursor: point;
+					background-color: transparent;
+					border: none;
+					border-bottom: 1px solid #9e9e9e;
+					outline: none;
+					font-size: 1rem;
+					margin: 0 0 20px 45px;
+					padding: 0;
+					display: block;
+
+					option {
+						width: 100%;
+						height: 45px;
+						line-height: 45px;
+						color: $theme_color;
+						padding-left: 20px;
+						border: none;
+					}
+				} 
+
+			}
+		}
+	}
+
+	.notice {
+		width: 240px;
+		border: 1px solid #d4d4d4;
+		min-height: 500px;
+		padding: 0 20px 15px;
+		color: #333;
+
+		.process {
+			padding: 20px 0;
+			border-bottom: 1px solid #f0f0f0;
+		}
+
+		.problem {
+			padding: 20px 0;
+
+			h6 {
+				font-size: 16px;
+				margin: 10px 0;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+
+	}
+
+	#choose-map-modal.modal {
+	 	width: 900px;
+		max-height: 85%;
+
+		.modal-content {
+			width: 100%;
+			padding:2px;
+			position: relative;
+
+			#business-address-map {
+		 		width: 100%;
+		 		height: 400px;
+		 	}
+
+		 	.search-area {
+		 		width: 380px;
+		 		height: 40px;
+		 		position: absolute;
+		 		top: 2px;
+		 		left: 2px;
+
+		 		input {
+		 			width: 340px;
+		 			height: 100%;
+		 			padding-left: 5px;
+		 			padding-right: 40px;
+		 			border-bottom: 1px dashed rgb(33, 29, 31);
+		 			font-weight: 700;
+		 			margin-bottom: 0;
+
+		 			&:focus {
+		 				border-bottom: 1px solid #26a69a;
+		 				background-color: rgba(255, 255, 255, 0.7);
+		 			}
+		 		}
+
+				i {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 40px;
+					height: 40px;
+					font-weight: 600;
+					font-size: 30px;
+					padding: 5px 5px 5px 10px;
+					color: #928888;
+
+					&:hover {
+						color: #2e77e5;
+						cursor: pointer;
+					}
+				}
+
+				.result-panel {
+					padding-left: 5px;
+					width: 100%;
+					background-color: rgba(255, 255, 255, 0.75);
+
+					ul {
+						width: 100%;
+
+						li {
+							width: 100%;
+							height: 29px;
+							line-height: 30px;
+							border-bottom: 1px solid #eee;
+							cursor: pointer;
+
+							&:hover {
+								background-color: rgba(177, 239, 190, 0.9);
+							}
+						}
+					}
+				}
+		 	}
+		}
+	 }
+}

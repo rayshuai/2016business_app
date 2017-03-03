@@ -1,0 +1,170 @@
+<account-title></account-title>
+
+<div class="row">
+	<div class="register-body col l10 m10 offset-l1 offset-m1">
+		<div class="row">
+			<div class="register-con col l8 m8" style="margin-left: 30px;">
+				<div class="row">
+					<div class="register-info col l12 m12" style="border-bottom: 1px solid #e5e5e5">
+						<div class="row">
+							<div class="info-title">
+								<p>提供商家信息</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="info-con col l12 m12">
+								<div class="row">
+									<form name="bForm" class="col m12 s12">
+										<div class="row">
+											<div class="input-field col m8 s8">
+												<i class="material-icons prefix">business</i>
+												<input name="b_name" type="text" id="_business-name" class="validate" ng-model="form.business_name" required ng-maxlength="20" length="20">
+												<label for="_business-name">商铺名称</label>
+											</div>
+											<i class="col m4 s4 error" ng-if="(bForm.b_name.$error.required && bForm.b_name.$touched)">商铺名称不能为空</i>
+											<i class="col m4 s4 error" ng-if="(bForm.b_name.$error.maxlength)">商铺的名称不要超过20个字符哦</i>
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">settings_phone</i>
+												<input name="b_phone" type="tel" id="_business-phone" class="validate" ng-model="form.business_phone" required>
+												<label for="_business-phone">商铺电话</label>
+											</div>
+											<i class="col s4 m4 error" ng-if="(bForm.b_phone.$error.required && bForm.b_phone.$touched )">商铺电话不能为空</i>
+										</div>
+										<div class="row">
+											<div class="input-field col m8 s8">
+												<i class="material-icons prefix">home</i>
+												<input name="b_s_address" type="text" id="_business-show-address" class="validate" ng-model="form.business_show_address" required ng-maxlength="20" length="20">
+												<label for="_business-show-address">商铺地址(向消费者推送)</label>
+											</div>
+											<i class="col s4 m4 error" ng-if="(bForm.b_s_address.$error.required && bForm.b_s_address.$touched)">该项不能为空哦</i>
+											<i class="col s4 m4 error" ng-if="(bForm.b_s_address.$error.maxlength)">商铺地址不要超过20个字符哦</i>
+
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">location_on</i>
+												<input name="b-address" type="text" id="_business-address" class="validate" disabled value="请在地图中标记店铺的位置" ng-model="form.business_address">
+											</div>
+											<a class="btn waves-effect waves-light remark-business-btn" ng-click="openMap()">去定位</a>
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">mode_edit</i>
+												<textarea name="b-des" id="_business-des" class="materialize-textarea" length="120" ng-model="form.business_des"></textarea>
+												<label for="_business-des">请对您的店铺进行简单描述</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">widgets</i>
+												<select name="category" class="category" ng-model="form.category" ng-options="type.name for type in business_type">
+													<option value="0" disabled selected>品类</option>
+												</select>
+											</div>
+											<div class="input-field col s4 m4">
+												<input type="file" name="上传图片" form-upload="">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="register-info col l12 m12">
+						<div class="row">
+							<div class="info-title">
+								<p>注册个人信息</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="info-con col l12 12">
+								<div class="row">
+									<form name="hForm" class="col m12 s12">
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">person_pin</i>
+												<input name="h_name" type="text" id="_host-name" class="validate" ng-model="form.host_name" required>
+												<label for="_host-name">店主的真实姓名</label>
+											</div>
+											<i class="col s4 m4 error" ng-if="(hForm.h_name.$error.required && hForm.h_name.$touched)">该项不能为空</i>
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">smartphone</i>
+												<input name="h_phone" type="tel" id="_host-phone" class="validate" ng-model="form.host_phone" ng-maxlength="11" required length="11">
+												<label for="_host-name">店主的联系方式</label>
+											</div>
+											<i class="col s4 m4 error" ng-if="(hForm.h_phone.$error.required && hForm.h_phone.$touched)">该项不能为空哦</i>
+											<i class="col s4 m4 error" ng-if="(hForm.h_phone.$error.maxlength)">手机号有点长了哦</i>
+										</div>
+										<div class="row">
+											<div class="input-field col s8 m8">
+												<i class="material-icons prefix">https</i>
+												<input name="h_pass" type="password" id="_host-pass" class="validate" ng-model="form.host_pass" required>
+												<label for="_host-name">输入密码</label>
+											</div>
+											<i class="col s4 m4 error" ng-if="( hForm.h_pass.$error.required && hForm.h_pass.$touched)">该项不能为空哦</i>
+										</div>
+										<div class="row">
+											<a class="btn waves-effect waves-light col offset-m2" ng-click="registerAll()">注册全部信息</a>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="notice col" style="margin-left: 20px;">
+				<div class="process">
+					<h5>合作流程</h5>
+					<ul>
+						<li><p>第1步：商家提供注册信息</p></li>
+						<li><p>第2步：进行资质审核</p></li>
+						<li><p>第3步：审核通过，商家入驻</p></li>
+					</ul>
+				</div>
+				<div class="problem">
+					<h5>常见问题</h5>
+					<ul>
+						<li>
+							<h6>1.与会管平台合作是否收费？</h6>
+							<p>不同合作项目及地区标准会有差异，具体合作费用及结算问题在资质审核后，当地业务员会与您洽谈。</p>
+						</li>
+						<li>
+							<h6>2.提交注册信息后，多久会给予回复？</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sunt, ipsam nobis dolor necessitatibus perferendis vero, commodi itaque magni facilis illo quidem fuga quibusdam atque distinctio veniam sequi. Error, hic!</p>
+						</li>
+						<li>
+							<h6>3.该平台主要有哪些常见行业？</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam optio, quidem illum consequatur minus cumque expedita rerum, aliquid, esse corporis, sequi fugiat maxime nam suscipit eveniet id accusantium nostrum quaerat!</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="choose-map-modal" class="modal">
+			<div class="modal-content">
+				<div id="business-address-map"></div>
+				<div class="search-area">
+					<input id="business-address-map-input" type="text" ng-model="searchCondition" ng-click="setListTimer()">
+					<i class="material-icons" ng-click="search()">location_searching</i>
+					<div class="result-panel">
+						<ul>
+							<li ng-repeat="result in searchList" ng-bind="result" ng-click="setCondition(result)"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<a href="javascript:;" class=" modal-action modal-close waves-effect waves-green btn-flat">取消</a>
+				<a href="javascript:;" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="confirmMap()">确认</a>
+			</div>
+		</div>
+	</div>
+</div>

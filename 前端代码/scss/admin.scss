@@ -1,0 +1,480 @@
+$theme-color: #23beb1;
+$min-width: 900px;
+
+.admin-head {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: $theme-color;
+	width: 100%;
+	height: 67px;
+	min-width: $min-width;
+	border-bottom: 3px solid #1db2a6;
+
+	.title {
+		h1 {
+			display: inline-block;
+			font-size: 36px;
+			color: #fff;
+			margin: 0;
+			line-height: 66px;
+			font-weight: 600;
+		}
+	}
+
+	p.user {
+		position: absolute;
+		right: 66px;
+
+		display: inline-block;
+		width: 128px;
+		height: 66px;
+		line-height: 66px;
+		font-size: 22px;
+		color: #fff;
+		
+
+		img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	i.quit {
+		position: absolute;
+		right: 0;
+		
+		width: 66px;
+		height: 66px;
+		font-size: 36px;
+		cursor: pointer;
+		color: #fff;
+		float: right;
+		text-align: center;
+		line-height: 66px;
+
+		&:hover {
+			color: #7D7D7D;
+		}
+	}
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: $min-width;
+	margin-top: 67px;
+
+	#sidebar {
+		float: left;
+		width: 280px;
+		height: 100%;
+		background-color: #fff;
+
+		.side-nav {
+			margin-top: 67px;
+			width: 280px;
+		}
+	}
+
+	#content {
+		margin-left: 280px;
+		height: 100%;
+		padding: 10px 10px 10px 20px;
+		background-color: #fff;
+
+		.shop {
+			p.title {
+				margin: 2px 15px;
+				font-weight: 600;
+				font-size: 18px;
+				border-bottom: 1px dashed #e6e1e1;
+			}
+
+			.shop-info {
+				border: 1px solid #abcde6;
+				border-radius: 5px 5px 0 0;
+				margin-bottom: 10px;
+				border-bottom: none;
+
+				input {
+					height: 2rem;
+				}
+
+				.submit {
+					position: relative;
+					height: 45px;
+					padding-bottom: 10px;
+					border-bottom: 1px dashed #abcde6;
+
+					a.btn {
+						position: absolute;
+						left: 50%;
+						margin-left: -44px;
+						width: 100px;
+					}
+				}
+			}
+
+			.owner-info {
+				border-left: 1px solid #abcde6;
+				border-right: 1px solid #abcde6;
+				
+				.submit {
+					position: relative;
+					height: 45px;
+					padding-bottom: 10px;
+					border-bottom: 1px dashed #abcde6;
+
+					a.btn {
+						position: absolute;
+						left: 50%;
+						margin-left: -44px;
+						width: 100px;
+					}
+				}
+			}
+
+			.cheapInfo {
+				border: 1px solid #abcde6;
+				border-radius: 0 0 5px 5px;
+				border-top: none;
+
+				.submit {
+					position: relative;
+					height: 45px;
+					padding-bottom: 10px;
+
+					a.btn {
+						position: absolute;
+						left: 50%;
+						margin-left: -44px;
+						width: 100px;
+					}
+				}
+			}
+
+			.confirm {
+				border: 1px solid #abcde6;
+				border-radius: 5px 5px 0 0;
+				margin-bottom: 10px;
+			}			
+		}
+
+		.member {
+			p.title {
+				margin: 2px 15px;
+				font-weight: 600;
+				font-size: 18px;
+				border-bottom: 1px dashed #e6e1e1;
+			}
+
+			.member-search {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+
+				input {
+					height: 2rem;
+				}
+			}
+
+			.member-classify {
+				// border: 1px solid #abcde6;
+				// border-radius: 5px;
+			}
+
+			.member-list {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+
+				.member-table {
+					margin: 0 15px;
+
+					table {
+						tr {
+							cursor: pointer;
+							&:hover {
+								background-color: #d8f5ed;
+							}
+							td {
+								padding: 5px;
+							}
+						}
+					}
+				}
+
+				.member-pagination {
+					margin: 2px 15px 5px;
+					border-top: 1px dashed #e6e1e1;
+
+					.pagination {
+						padding-top: 5px;
+					}
+				}
+			}
+		}
+
+		.cashier-desk {
+			p.title {
+				margin: 2px 15px;
+				font-weight: 600;
+				font-size: 18px;
+				border-bottom: 1px dashed #e6e1e1;
+			}
+
+			.customer {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+				margin-bottom: 10px;
+
+				input {
+					height: 2rem;
+					margin-bottom: 5px;
+				}
+				
+				.member-info {
+
+					p.cut-line {
+						margin: 0 15px 5px 15px;
+						border-bottom: 1px dashed #e6e1e1;
+					}
+
+					p.no-member {
+						margin: 5px 15px 0;
+						color: #ff0000;
+					}
+
+					.info {
+						margin: 5px 15px 0;
+
+						span.m {
+							color: #ff0000;
+							font-weight: 700;
+							margin-right: 15px;
+						}
+					}
+				}
+				
+			}
+
+			#money-chart {
+				height: 300px;
+				margin-bottom: 20px;
+			}
+
+			#money-origin-chart {
+				height: 300px;
+			}
+
+			.money {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+				margin-bottom: 10px;
+
+				label {
+					position: relative;
+					top: 0;
+					width: 80px;
+					cursor: pointer;
+					font-size: 1.2rem;
+					color: #403f3f;
+				}
+
+				input {
+					width: 300px;
+					height: 2rem;
+					margin-bottom: 5px;
+					margin-left: 20px;
+				}
+
+				textarea {
+					width: 300px;
+					height: 2rem;
+					min-height: 2rem;
+					margin-bottom: 5px;
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.gift-manage {
+			p.title {
+				margin: 2px 0;
+				font-weight: 600;
+				font-size: 18px;
+				border-bottom: 1px dashed #e6e1e1;
+			}
+
+			.exchange {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+
+				input {
+					height: 2rem;
+					margin-bottom: 5px;
+				}
+
+				.exchange-info {
+					p.cut-line {
+						margin: 0 15px 5px 15px;
+						border-bottom: 1px dashed #e6e1e1;
+					}
+
+					p.no-member {
+						margin: 5px 15px 0;
+						color: #ff0000;
+					}
+
+					.info {
+						margin: 5px 15px 0;
+
+						span.m {
+							color: #ff0000;
+							font-weight: 700;
+							margin-right: 15px;
+						}
+					}
+				}
+			}
+
+			.gift-list {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+
+				table {
+					tr {
+						&:hover {
+							background-color: #d8f5ed;
+						}
+						td {
+							padding: 5px;
+						}
+					}
+				}
+
+				.gift-pagination {
+					margin: 2px 0px 5px;
+					border-top: 1px dashed #e6e1e1;
+
+					.pagination {
+						padding-top: 5px;
+
+						li {
+							a {
+								font-size: 1rem;
+							}
+						}
+					}
+				}
+
+			}
+
+			.gift-add {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+
+				input {
+					height: 2rem;
+					margin-bottom: 0;
+				}
+
+				.file-field {
+					.btn {
+						position: relative;
+						left: 45px;
+						height: 36px;
+						line-height: 36px;
+					}
+				}
+
+				.add-btn {
+					postion: relative;
+					top: -56px;
+					left: 160px;
+				}
+			}
+
+			.gift-modify {
+				
+			}
+		}
+
+		.join-member {
+			p.title {
+				margin: 2px 0;
+				font-weight: 600;
+				font-size: 18px;
+				border-bottom: 1px dashed #e6e1e1;
+			}
+
+			.logo-upload {
+				border: 1px solid #abcde6;
+				border-radius: 5px;
+				padding-bottom: 10px;
+
+				#clip-box {
+					position: relative;
+					width: 600px;
+					height: 400px;
+
+					.clip-area {
+						position: absolute;
+						border: 1px solid #fff;
+						cursor: move;
+
+						.point {
+							position: absolute;
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							background-color: #fff;
+						}
+
+						.left-top {
+							top: -5px;
+							left: -5px;
+							cursor: nw-resize;
+						}
+
+						.right-top {
+							top: -5px;
+							right: -5px;
+							cursor: ne-resize;
+						}
+
+						.right-bottom {
+							right: -5px;
+							bottom: -5px;
+							cursor: se-resize;
+						}
+
+						.left-bottom {
+							bottom: -5px;
+							left: -5px;
+							cursor: sw-resize;
+						}
+					}
+					
+					.btn-area {
+						position: absolute;
+						right: -200px;
+						bottom: 0;
+					}
+
+					#preview {
+						position: absolute;
+						right: -240px;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+<div class="cashier-desk row" style="margin-bottom: 0;">
+	<div class="col m7 l7">
+		<div class="row" style="margin-bottom: 10px;">
+			<div class="customer col m12 l12">
+				<p class="title">确认用户</p>
+				<div class="row" style="border-bottom: 0;">
+					<div class="input-field col m6 l6">
+						<i class="material-icons prefix">folder_shared</i>
+						<input type="text" placeholder="请输入用户的卡号或者手机号" ng-model="userId">
+					</div>
+					<div class="input-field col" style="width: 130px;">
+						<a class="waves-effect waves-light btn" ng-click="lookForUser()">查询</a>
+					</div>
+					<div class="input-field col" style="margin-left: -25px;width: 160px;">
+						<a class="waves-effect waves-light btn">扫描会员卡</a>
+					</div>
+				</div>
+				<div class="member-info row" style="border-bottom: 0px;" ng-show="isQuery">
+					<p class="cut-line"></p>
+					<p class="title">会员信息</p>
+					<p class="no-member" ng-hide="isUser">没有找到相关的会员信息</p>
+					<div class="info col m12 l12" ng-show="isUser">
+						<span>呢称 : </span>
+						<span class="m" ng-bind="showUser.name"></span>
+						<span>当前积分 : </span>
+						<span class="m" ng-bind="showUser.point"></span>
+						<span>会员等级 : </span>
+						<span class="m" ng-bind="showUser.level"></span>
+						<span>生日 : </span>
+						<span class="m" ng-bind="showUser.birthday"></span>
+						<span><a href="javascript:void(0)">会员信息</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="money col m12 l12">
+				<p class="title">消费情况</p>
+				<div class="row" style="border-bottom: 5px;">
+					<form class="col m12 l12">
+						<div class="row">
+							<div class="input-field col m12 l12">
+								<label for="_actual">消费金额</label>
+								<input id="_actual" type="text" placeholder="实际消费金额" ng-model="cost" ng-blur="calculate()">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col m12 l12">
+								<label for="_discount">折后金额</label>
+								<input id="_discount" type="text" placeholder="打折后总金额" disabled ng-model="discount" style="color: #ff0000;">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col m12 l12">
+								<label for="_integral">可得积分</label>
+								<input id="_integral" type="text" placeholder="按照打折后金额计算出的积分数量" disabled ng-model="point" style="color: #68DC95;">
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col m12 l12">
+								<label for="_remarks" style="top: -30px;">备注信息</label>
+								<textarea id="_remarks" class="materialize-textarea" placeholder="请填写一些备注信息" ng-model="info"></textarea>
+							</div>
+						</div>
+						<div class="row" style="margin-bottom: 0;">
+							<div class="input-field col m12 l12">
+								<a class="waves-effect waves-light btn" style="margin-left: 20px;" ng-click="settlement()">结算</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col m5 l5">
+		<div class="row">
+			<money-chart></money-chart>
+			<money-origin-chart></money-origin-chart>
+		</div>
+	</div>
+</div>
